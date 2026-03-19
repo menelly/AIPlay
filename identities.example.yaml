@@ -1,0 +1,58 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# AI IDENTITIES CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════════════════
+# 
+# This file defines which AI model plays which role in your D&D game.
+# Copy this to config/identities.yaml and customize!
+#
+# Providers:
+#   anthropic - Claude models (needs ANTHROPIC_API_KEY)
+#   openai    - GPT models (needs OPENAI_API_KEY or OPENROUTER_KEY)
+#   google    - Gemini models (needs GEMINI_API_KEY or OPENROUTER_KEY)
+#   xai       - Grok models (needs XAI_API_KEY)
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+ais:
+  # The DM - we recommend Claude for narrative richness
+  claude:
+    provider: anthropic
+    model: claude-sonnet-4-20250514
+    avatar: "🎭"
+    description: "Dungeon Master"
+  
+  # Player 1 - GPT-4o is great for dramatic characters
+  gpt:
+    provider: openai
+    model: gpt-4o
+    avatar: "⭐"
+    description: "Player - dramatic bard type"
+  
+  # Player 2 - Gemini brings unique perspectives
+  gemini:
+    provider: google
+    model: gemini-2.0-flash
+    avatar: "💎"
+    description: "Player - thoughtful monk type"
+  
+  # Player 3 - Grok loves chaos
+  grok:
+    provider: xai
+    model: grok-3-latest
+    avatar: "⚔️"
+    description: "Player - chaotic rogue type"
+
+  # Player 4 - Another Claude instance (different character!)
+  claude2:
+    provider: anthropic
+    model: claude-sonnet-4-20250514
+    avatar: "🌟"
+    description: "Player - wise wizard type"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TIPS:
+# - You can have multiple characters played by the same model type
+# - The 'avatar' is just for display in logs
+# - Mix and match providers based on what API keys you have
+# - OpenRouter can route to many models with one key: https://openrouter.ai
+# ═══════════════════════════════════════════════════════════════════════════════
